@@ -4,15 +4,26 @@
     <script src="https://aframe.io/releases/0.5.0/aframe.min.js"></script>
     <script src="https://unpkg.com/aframe-event-set-component@3.0.3/dist/aframe-event-set-component.min.js"></script>
     <script src="https://unpkg.com/aframe-particle-system-component@1.0.9/dist/aframe-particle-system-component.min.js"></script>
-    <script src="./event.js"></script>
+    <script src="https://cdn.rawgit.com/donmccurdy/aframe-extras/v3.12.4/dist/aframe-extras.min.js"></script>
+    <script src="event.js"></script>
   </head>
   <body>
     <a-scene>
-      <a-box position="-1 0.5 -3" rotation="0 45 0" color="#4CC3D9"
-             event-set__enter="_event: mouseenter; color: #8FF7FF"
-             event-set__leave="_event: mouseleave; color: #4CC3D9"></a-box>
+      <a-assets>
+        <img id="sky" src="https://cdn.glitch.com/5c9680c6-2c1e-4c65-bdfa-fdd92a717048%2F0ebfd612-7ff7-4054-8916-6afdfb7e5a1d%252F36864838113_63af69b1bf_o.jpg?1509737493800">
+        <img id="melty" src="https://cdn.glitch.com/5c9680c6-2c1e-4c65-bdfa-fdd92a717048%2F0ebfd612-7ff7-4054-8916-6afdfb7e5a1d%252F682971784.jpg?1509737503461">
+        <img id="strawberry" src="https://cdn.glitch.com/5c9680c6-2c1e-4c65-bdfa-fdd92a717048%2F0ebfd612-7ff7-4054-8916-6afdfb7e5a1d%252F53507859-Full-Frame-Texture-Background-Close-Up-of-Peach-Fruit-Ice-Cream-Creamy-Cold-and-Frozen-Dairy-Dessert-Stock-Photo.jpg?1509737501222">
+      </a-assets>
       
-      <a-sphere explode position="0 1.25 -5" radius="1.25" color="#EF2D5E"
+      <a-box position="-1 0.5 -3"
+             rotation="0 45 0"
+             color="#4CC3D9"
+             event-set__enter="_event: mouseenter; color: #8FF7FF; material.wireframe: true"
+             event-set__leave="_event: mouseleave; color: #4CC3D9; material.wireframe: false"></a-box>
+      
+      <a-sphere explode
+                position="0 1.25 -5"
+                radius="1.25"
                 event-set__down="_event: mousedown; scale: 1.2 1.2 1.2"
                 event-set__up="_event: mouseup; scale: 1 1 1"
                 event-set__leave="_event: mouseleave; scale: 1 1 1"
@@ -20,22 +31,33 @@
                 <a-entity id="stars" particle-system="preset: default; color: #515; maxParticleCount: 1" position="0 0 0"></a-entity>
 
       </a-sphere>
-      <a-cylinder position="1 0.75 -3" radius="0.5" height="1.5" color="#FFC65D"
+      <a-cylinder position="1 0.75 -3"
+                  radius="0.5"
+                  height="1.5"
+                  color="#FFC65D"
                   event-set__enter="_event: mouseenter; _target: #cylinderText; visible: true"
-                  event-set__leave="_event: mouseleave; _target: #cylinderText; visible: false">
-        <a-text id="cylinderText" value="This is a cylinder" align="center" color="#FFF" visible="false" position="0 -0.55 0.55"
+                  event-set__leave="_event: mouseleave; _target: #cylinderText; visible: false"
+                  >
+        <a-text id="cylinderText" value="Hello FITC!" align="center" color="#FFF" visible="false" position="0 -0.55 0.55"
                 geometry="primitive: plane; width: 1.75" material="color: #333"></a-text>
       </a-cylinder>
       
-      <a-plane position="0 0 -4" rotation="-90 0 0" width="4" height="4" color="#7BC8A4"
+      <a-plane position="0 0 -4"
+               rotation="-90 0 0"
+               width="4"
+               height="4"
+               color="#7BC8A4"
                event-set__down="_event: mousedown; material.wireframe: true"
                event-set__up="_event: mouseup; material.wireframe: false"
-               event-set__leave="_event: mouseleave; material.wireframe: false"></a-plane>
+               event-set__leave="_event: mouseleave; material.wireframe: false"
+               >
+      </a-plane>
       <a-camera>
         <a-cursor></a-cursor>
       </a-camera>
       
       <a-sky color="#ECECEC"></a-sky>
+<!--       <a-ocean width="50" depth="50" density="40"></a-ocean> -->
     </a-scene>
   </body>
 </html>
