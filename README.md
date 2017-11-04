@@ -89,6 +89,8 @@ Quick and easy way to spin up a demo:
 1. Include the `aframe-environment-component`
 2. Add `<a-entity environment="preset: yavapai; numDressing: 500"></a-entity>` OR `<a-entity environment="preset: forest; sunPosition: 1 5 -2; groundColor: #445"></a-entity>`
 
+OR with A-Frame extras: `<a-ocean width="50" depth="50" density="40"></a-ocean>`
+
 - A bunch of customization options in the package repo including sky color, play area size, dressing (number of objects) etc.
 
 # Interactin'
