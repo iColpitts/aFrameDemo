@@ -6,7 +6,7 @@ Original outline can be found here: https://github.com/DamesMakingGames/intro-to
 1. The A-frame scene
 2. Hosting on Glitch
 3. Inspector
-4. The Registry 
+4. The Registry
 5. Interactin’
 
 # The A-Frame Scene
@@ -40,7 +40,7 @@ https://glitch.com/edit/#!/fitc-demo?path=cool-file.html:7:9
 
 - Start where someone left off by cicking Remix this to create a new editable version of this code.
 
-- When your code is highlighted you can click on the raised hand to automatically ask the community for help. It will appear ont he homepage of people who have similar code
+- When your code is highlighted you can click on the raised hand to automatically ask the community for help. It will appear on the homepage of people who have similar code
 
 - Invite collaborators for real time collaborations
 
@@ -87,7 +87,7 @@ Some packages in the regisry can out of the box give you:
 Quick and easy way to spin up a demo:
 
 1. Include the `aframe-environment-component`
-2. Add `<a-entity environment="preset: yavapai; numDressing: 500"></a-entity>`
+2. Add `<a-entity environment="preset: yavapai; numDressing: 500"></a-entity>` OR `<a-entity environment="preset: forest; sunPosition: 1 5 -2; groundColor: #445"></a-entity>`
 
 - A bunch of customization options in the package repo including sky color, play area size, dressing (number of objects) etc.
 
