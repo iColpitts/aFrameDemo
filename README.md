@@ -148,4 +148,3 @@ This means we can ask for entities that have or don’t have a certain set of co
 * [Guri](https://gurivr.com/)
 * [MozVR](https://mozvr.com/)
 * [https://webvr.rocks/](https://webvr.rocks/)
-
